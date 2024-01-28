@@ -99,10 +99,10 @@ class Program
             foreach (var item in sermayeyeGoreGelen)
             {
                 var dogumTarihi = hlp.TarihYazdir(item.DogumGun, item.DogumAyi, item.DogumYili);
+                var yasi=hlp.YasHesapla(dogumTarihi);
+                var yazi = Convert.ToString(item.Sermaye).ParayiYaziyaCevir();
 
-                var yazi = Convert.ToString(item.Sermaye);
-
-                Console.WriteLine($"{item.Ad} Soyad:{item.Soyad} Doğum Tarihi:{dogumTarihi} Yaşı:{hlp.YasHesapla(dogumTarihi)} Sermaye:{item.Sermaye} Sermaye Yazı İle:{yazi.ParayiYaziyaCevir()}");
+                Console.WriteLine($"Ad:{item.Ad} Soyad:{item.Soyad} Doğum Tarihi:{dogumTarihi} Yaşı:{yasi} Sermaye:{item.Sermaye} Sermaye Yazı İle:{yazi}");
             }
         }
         catch (Exception ex)
