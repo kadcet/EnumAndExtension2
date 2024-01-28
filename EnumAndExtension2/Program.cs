@@ -1,4 +1,5 @@
-﻿using EnumAndExtension2.Model;
+﻿using EnumAndExtension2.Helper;
+using EnumAndExtension2.Model;
 using EnumAndExtensionTotarial.Bll.Extensions;
 using System.ComponentModel;
 
@@ -84,15 +85,24 @@ class Program
             Console.WriteLine("Hangi Kayıt no Getirilsin");
             var girilenKayitNoInt = Convert.ToInt32(Console.ReadLine());
             var gelenKayit = kisilerTablosu.Where(x => x.KayitNo == girilenKayitNoInt).FirstOrDefault();
+
             Console.WriteLine($"Ad: {gelenKayit.Ad} Soyad: {gelenKayit.Soyad} Sermaye Tutarı:{gelenKayit.Sermaye}  Yazı ile:{Convert.ToString(gelenKayit.Sermaye).ParayiYaziyaCevir()}");
 
             Console.WriteLine("Sermayesi Kaç Lira Üstü olanlar Gelsin");
             var gelenSermaye = Convert.ToInt32(Console.ReadLine());
+
             var sermayeyeGoreGelen = kisilerTablosu.Where(x => x.Sermaye > gelenSermaye).ToList();
+            //var sermayeyeGoreGelen1 = kisilerTablosu.Select(x => x.Sermaye > gelenSermaye).ToList();
+
+            var hlp = new Helper();
 
             foreach (var item in sermayeyeGoreGelen)
             {
-                Console.WriteLine($"{item.Ad} Soyad:{item.Soyad} Sermaye:{item.Sermaye} Sermaye Yazı İle:{Convert.ToString(item.Sermaye).ParayiYaziyaCevir()}");
+                var dogumTarihi = hlp.TarihYazdir(item.DogumGun, item.DogumAyi, item.DogumYili);
+
+                var yazi = Convert.ToString(item.Sermaye);
+
+                Console.WriteLine($"{item.Ad} Soyad:{item.Soyad} Doğum Tarihi:{dogumTarihi} Yaşı:{hlp.YasHesapla(dogumTarihi)} Sermaye:{item.Sermaye} Sermaye Yazı İle:{yazi.ParayiYaziyaCevir()}");
             }
         }
         catch (Exception ex)
