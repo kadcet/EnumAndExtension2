@@ -18,7 +18,7 @@ namespace EnumAndExtension2.Model
         public int DogumGun { get; set; }
         public int DogumAyi { get; set; }
         public int DogumYili { get; set; }
-        public int Sermaye { get; set; }
+        public decimal Sermaye { get; set; }
         public KartTipi KayitKartTipi { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace EnumAndExtensionTotarial.Bll.Extensions
 
         }
 
-        public static string ParayiYaziyaCevir(this string gelentutar)
+        public static string ParayiYaziyaCevir(this decimal gelentutar)
         {
             decimal dectutar = Convert.ToDecimal(gelentutar);
             string strTutar = dectutar.ToString("F2").Replace('.', ',');    // Replace('.',',') ondalık ayraç ayracı           
