@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayAndList", "ArrayAndLis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TryCatchBloklari", "TryCatchBloklari\TryCatchBloklari.csproj", "{01D83C75-48A9-4933-AB6F-0024F5740F29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev", "Odev\Odev.csproj", "{4A5DE44C-927C-424F-830C-F4960E3FC73E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odev", "Odev\Odev.csproj", "{4A5DE44C-927C-424F-830C-F4960E3FC73E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lambda", "Lambda\Lambda.csproj", "{67A9F6C0-6C0C-4427-94A8-944A3822C09C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev2", "Odev2\Odev2.csproj", "{9446BF10-945A-401F-A85D-3C963E3506EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{4A5DE44C-927C-424F-830C-F4960E3FC73E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A5DE44C-927C-424F-830C-F4960E3FC73E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A5DE44C-927C-424F-830C-F4960E3FC73E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A9F6C0-6C0C-4427-94A8-944A3822C09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A9F6C0-6C0C-4427-94A8-944A3822C09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A9F6C0-6C0C-4427-94A8-944A3822C09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A9F6C0-6C0C-4427-94A8-944A3822C09C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9446BF10-945A-401F-A85D-3C963E3506EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9446BF10-945A-401F-A85D-3C963E3506EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9446BF10-945A-401F-A85D-3C963E3506EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9446BF10-945A-401F-A85D-3C963E3506EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
